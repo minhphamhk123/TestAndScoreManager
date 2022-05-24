@@ -1,0 +1,166 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="thivachamthiModelStoreContainer" CdmEntityContainer="thivachamthiEntities5">
+    <EntitySetMapping Name="BAITHIs">
+      <EntityTypeMapping TypeName="thivachamthiModel.BAITHI">
+        <MappingFragment StoreEntitySet="BAITHI">
+          <ScalarProperty Name="sbd" ColumnName="sbd" />
+          <ScalarProperty Name="maMH" ColumnName="maMH" />
+          <ScalarProperty Name="diemthi" ColumnName="diemthi" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="BIENBANTHIs">
+      <EntityTypeMapping TypeName="thivachamthiModel.BIENBANTHI">
+        <MappingFragment StoreEntitySet="BIENBANTHI">
+          <ScalarProperty Name="maBB" ColumnName="maBB" />
+          <ScalarProperty Name="sbd" ColumnName="sbd" />
+          <ScalarProperty Name="ngaylap" ColumnName="ngaylap" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CANBOCOITHIs">
+      <EntityTypeMapping TypeName="thivachamthiModel.CANBOCOITHI">
+        <MappingFragment StoreEntitySet="CANBOCOITHI">
+          <ScalarProperty Name="maCB" ColumnName="maCB" />
+          <ScalarProperty Name="tenCB" ColumnName="tenCB" />
+          <ScalarProperty Name="donvi" ColumnName="donvi" />
+          <ScalarProperty Name="chucvu" ColumnName="chucvu" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DETHIVADAPANs">
+      <EntityTypeMapping TypeName="thivachamthiModel.DETHIVADAPAN">
+        <MappingFragment StoreEntitySet="DETHIVADAPAN">
+          <ScalarProperty Name="maDT" ColumnName="maDT" />
+          <ScalarProperty Name="maMH" ColumnName="maMH" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="GIAOVIENCHAMTHIs">
+      <EntityTypeMapping TypeName="thivachamthiModel.GIAOVIENCHAMTHI">
+        <MappingFragment StoreEntitySet="GIAOVIENCHAMTHI">
+          <ScalarProperty Name="maGV" ColumnName="maGV" />
+          <ScalarProperty Name="tenGV" ColumnName="tenGV" />
+          <ScalarProperty Name="donvi" ColumnName="donvi" />
+          <ScalarProperty Name="chuvu" ColumnName="chuvu" />
+          <ScalarProperty Name="maMH" ColumnName="maMH" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="LICHTHIs">
+      <EntityTypeMapping TypeName="thivachamthiModel.LICHTHI">
+        <MappingFragment StoreEntitySet="LICHTHI">
+          <ScalarProperty Name="maCB" ColumnName="maCB" />
+          <ScalarProperty Name="maMH" ColumnName="maMH" />
+          <ScalarProperty Name="malop" ColumnName="malop" />
+          <ScalarProperty Name="ngaythi" ColumnName="ngaythi" />
+          <ScalarProperty Name="phongthi" ColumnName="phongthi" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="LOPs">
+      <EntityTypeMapping TypeName="thivachamthiModel.LOP">
+        <MappingFragment StoreEntitySet="LOP">
+          <ScalarProperty Name="malop" ColumnName="malop" />
+          <ScalarProperty Name="tenlop" ColumnName="tenlop" />
+          <ScalarProperty Name="siso" ColumnName="siso" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MONTHIs">
+      <EntityTypeMapping TypeName="thivachamthiModel.MONTHI">
+        <MappingFragment StoreEntitySet="MONTHI">
+          <ScalarProperty Name="maMH" ColumnName="maMH" />
+          <ScalarProperty Name="tenMH" ColumnName="tenMH" />
+          <ScalarProperty Name="soDVHT" ColumnName="soDVHT" />
+          <ScalarProperty Name="hinhthucthi" ColumnName="hinhthucthi" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="NGUOIDUNGs">
+      <EntityTypeMapping TypeName="thivachamthiModel.NGUOIDUNG">
+        <MappingFragment StoreEntitySet="NGUOIDUNG">
+          <ScalarProperty Name="tendangnhap" ColumnName="tendangnhap" />
+          <ScalarProperty Name="matkhau" ColumnName="matkhau" />
+          <ScalarProperty Name="tennguoidung" ColumnName="tennguoidung" />
+          <ScalarProperty Name="loaitaikhoan" ColumnName="loaitaikhoan" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="sysdiagrams">
+      <EntityTypeMapping TypeName="thivachamthiModel.sysdiagram">
+        <MappingFragment StoreEntitySet="sysdiagrams">
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="principal_id" ColumnName="principal_id" />
+          <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
+          <ScalarProperty Name="version" ColumnName="version" />
+          <ScalarProperty Name="definition" ColumnName="definition" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="THISINHs">
+      <EntityTypeMapping TypeName="thivachamthiModel.THISINH">
+        <MappingFragment StoreEntitySet="THISINH">
+          <ScalarProperty Name="sbd" ColumnName="sbd" />
+          <ScalarProperty Name="hoten" ColumnName="hoten" />
+          <ScalarProperty Name="ngaysinh" ColumnName="ngaysinh" />
+          <ScalarProperty Name="malop" ColumnName="malop" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionName="thivachamthiModel.Store.THONGKEBAITHI" FunctionImportName="THONGKEBAITHI">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="thivachamthiModel.THONGKEBAITHI_Result">
+          <ScalarProperty Name="LOP" ColumnName="LOP" />
+          <ScalarProperty Name="MONHOC" ColumnName="MONHOC" />
+          <ScalarProperty Name="TONGSOBAITHI" ColumnName="TONGSOBAITHI" />
+          <ScalarProperty Name="SOHOCVIENCHUATHI" ColumnName="SOHOCVIENCHUATHI" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionName="thivachamthiModel.Store.THONGKEBIENBANVIPHAM" FunctionImportName="THONGKEBIENBANVIPHAM">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="thivachamthiModel.THONGKEBIENBANVIPHAM_Result">
+          <ScalarProperty Name="SBD" ColumnName="SBD" />
+          <ScalarProperty Name="HOTEN" ColumnName="HOTEN" />
+          <ScalarProperty Name="NGAYSINH" ColumnName="NGAYSINH" />
+          <ScalarProperty Name="LOP" ColumnName="LOP" />
+          <ScalarProperty Name="NGAYLAP" ColumnName="NGAYLAP" />
+          <ScalarProperty Name="MONTHI" ColumnName="MONTHI" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionName="thivachamthiModel.Store.THONGKEDIEMTHITHEOLOP" FunctionImportName="THONGKEDIEMTHITHEOLOP">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="thivachamthiModel.THONGKEDIEMTHITHEOLOP_Result">
+          <ScalarProperty Name="SBD" ColumnName="SBD" />
+          <ScalarProperty Name="HOTEN" ColumnName="HOTEN" />
+          <ScalarProperty Name="NGAYSINH" ColumnName="NGAYSINH" />
+          <ScalarProperty Name="DIEM" ColumnName="DIEM" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionName="thivachamthiModel.Store.THONGKELICHTHI" FunctionImportName="THONGKELICHTHI">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="thivachamthiModel.THONGKELICHTHI_Result">
+          <ScalarProperty Name="lop" ColumnName="lop" />
+          <ScalarProperty Name="monhoc" ColumnName="monhoc" />
+          <ScalarProperty Name="ngaythi" ColumnName="ngaythi" />
+          <ScalarProperty Name="canbocoithi1" ColumnName="canbocoithi1" />
+          <ScalarProperty Name="hinhthucthi" ColumnName="hinhthucthi" />
+          <ScalarProperty Name="phongthi" ColumnName="phongthi" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionName="thivachamthiModel.Store.THONGKETHEOCANBO" FunctionImportName="THONGKETHEOCANBO">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="thivachamthiModel.THONGKETHEOCANBO_Result">
+          <ScalarProperty Name="TENCB" ColumnName="TENCB" />
+          <ScalarProperty Name="DONVI" ColumnName="DONVI" />
+          <ScalarProperty Name="SOLANCOITHI" ColumnName="SOLANCOITHI" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+  </EntityContainerMapping>
+</Mapping>

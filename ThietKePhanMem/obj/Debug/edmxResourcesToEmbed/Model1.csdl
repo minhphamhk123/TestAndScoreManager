@@ -1,0 +1,319 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="thivachamthiModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <ComplexType Name="THONGKEBAITHI_Result">
+    <Property Name="LOP" Type="String" MaxLength="5" FixedLength="true" Unicode="false" />
+    <Property Name="MONHOC" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="TONGSOBAITHI" Type="Int32" />
+    <Property Name="SOHOCVIENCHUATHI" Type="Int32" />
+  </ComplexType>
+  <ComplexType Name="THONGKEBIENBANVIPHAM_Result">
+    <Property Name="SBD" Type="String" MaxLength="5" FixedLength="true" Unicode="false" />
+    <Property Name="HOTEN" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="NGAYSINH" Type="DateTime" />
+    <Property Name="LOP" Type="String" MaxLength="5" FixedLength="false" Unicode="true" />
+    <Property Name="NGAYLAP" Type="DateTime" />
+    <Property Name="MONTHI" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+  </ComplexType>
+  <ComplexType Name="THONGKEDIEMTHITHEOLOP_Result">
+    <Property Name="SBD" Type="String" MaxLength="5" FixedLength="true" Unicode="false" />
+    <Property Name="HOTEN" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="NGAYSINH" Type="DateTime" />
+    <Property Name="DIEM" Type="Double" />
+  </ComplexType>
+  <ComplexType Name="THONGKELICHTHI_Result">
+    <Property Name="lop" Type="String" MaxLength="5" FixedLength="true" Unicode="false" />
+    <Property Name="monhoc" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="ngaythi" Type="DateTime" />
+    <Property Name="canbocoithi1" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="hinhthucthi" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="phongthi" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+  </ComplexType>
+  <ComplexType Name="THONGKETHEOCANBO_Result">
+    <Property Name="TENCB" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="DONVI" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="SOLANCOITHI" Type="Int32" />
+  </ComplexType>
+  <EntityType Name="BAITHI">
+    <Key>
+      <PropertyRef Name="sbd" />
+      <PropertyRef Name="maMH" />
+    </Key>
+    <Property Name="sbd" Type="String" MaxLength="5" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="maMH" Type="String" MaxLength="5" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="diemthi" Type="Double" />
+    <NavigationProperty Name="MONTHI" Relationship="Self.fk_baithimonhoc" FromRole="BAITHI" ToRole="MONTHI" />
+    <NavigationProperty Name="THISINH" Relationship="Self.fk_baithithisinh" FromRole="BAITHI" ToRole="THISINH" />
+  </EntityType>
+  <EntityType Name="BIENBANTHI">
+    <Key>
+      <PropertyRef Name="maBB" />
+    </Key>
+    <Property Name="maBB" Type="String" MaxLength="5" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="sbd" Type="String" MaxLength="5" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="ngaylap" Type="DateTime" Nullable="false" Precision="0" />
+    <NavigationProperty Name="THISINH" Relationship="Self.fk_bienbanthithisinh" FromRole="BIENBANTHI" ToRole="THISINH" />
+  </EntityType>
+  <EntityType Name="CANBOCOITHI">
+    <Key>
+      <PropertyRef Name="maCB" />
+    </Key>
+    <Property Name="maCB" Type="String" MaxLength="5" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="tenCB" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="donvi" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="chucvu" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <NavigationProperty Name="LICHTHIs" Relationship="Self.fk_lichthicanbocoithi" FromRole="CANBOCOITHI" ToRole="LICHTHI" />
+  </EntityType>
+  <EntityType Name="DETHIVADAPAN">
+    <Key>
+      <PropertyRef Name="maDT" />
+    </Key>
+    <Property Name="maDT" Type="String" MaxLength="5" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="maMH" Type="String" MaxLength="5" FixedLength="true" Unicode="false" Nullable="false" />
+    <NavigationProperty Name="MONTHI" Relationship="Self.fk_dethimonhoc" FromRole="DETHIVADAPAN" ToRole="MONTHI" />
+  </EntityType>
+  <EntityType Name="GIAOVIENCHAMTHI">
+    <Key>
+      <PropertyRef Name="maGV" />
+    </Key>
+    <Property Name="maGV" Type="String" MaxLength="5" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="tenGV" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="donvi" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="chuvu" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="maMH" Type="String" MaxLength="5" FixedLength="true" Unicode="false" Nullable="false" />
+    <NavigationProperty Name="MONTHI" Relationship="Self.fk_gvchammonhoc" FromRole="GIAOVIENCHAMTHI" ToRole="MONTHI" />
+  </EntityType>
+  <EntityType Name="LICHTHI">
+    <Key>
+      <PropertyRef Name="maCB" />
+      <PropertyRef Name="maMH" />
+      <PropertyRef Name="malop" />
+    </Key>
+    <Property Name="maCB" Type="String" MaxLength="5" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="maMH" Type="String" MaxLength="5" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="malop" Type="String" MaxLength="5" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="ngaythi" Type="DateTime" Precision="0" />
+    <Property Name="phongthi" Type="String" MaxLength="5" FixedLength="true" Unicode="false" />
+    <NavigationProperty Name="CANBOCOITHI" Relationship="Self.fk_lichthicanbocoithi" FromRole="LICHTHI" ToRole="CANBOCOITHI" />
+    <NavigationProperty Name="LOP" Relationship="Self.fk_lichthilop" FromRole="LICHTHI" ToRole="LOP" />
+    <NavigationProperty Name="MONTHI" Relationship="Self.fk_lichthimonhoc" FromRole="LICHTHI" ToRole="MONTHI" />
+  </EntityType>
+  <EntityType Name="LOP">
+    <Key>
+      <PropertyRef Name="malop" />
+    </Key>
+    <Property Name="malop" Type="String" MaxLength="5" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="tenlop" Type="String" MaxLength="10" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="siso" Type="Int32" />
+    <NavigationProperty Name="LICHTHIs" Relationship="Self.fk_lichthilop" FromRole="LOP" ToRole="LICHTHI" />
+    <NavigationProperty Name="THISINHs" Relationship="Self.fk_thisinhlop" FromRole="LOP" ToRole="THISINH" />
+  </EntityType>
+  <EntityType Name="MONTHI">
+    <Key>
+      <PropertyRef Name="maMH" />
+    </Key>
+    <Property Name="maMH" Type="String" MaxLength="5" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="tenMH" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="soDVHT" Type="Int32" Nullable="false" />
+    <Property Name="hinhthucthi" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+    <NavigationProperty Name="BAITHIs" Relationship="Self.fk_baithimonhoc" FromRole="MONTHI" ToRole="BAITHI" />
+    <NavigationProperty Name="DETHIVADAPANs" Relationship="Self.fk_dethimonhoc" FromRole="MONTHI" ToRole="DETHIVADAPAN" />
+    <NavigationProperty Name="GIAOVIENCHAMTHIs" Relationship="Self.fk_gvchammonhoc" FromRole="MONTHI" ToRole="GIAOVIENCHAMTHI" />
+    <NavigationProperty Name="LICHTHIs" Relationship="Self.fk_lichthimonhoc" FromRole="MONTHI" ToRole="LICHTHI" />
+  </EntityType>
+  <EntityType Name="NGUOIDUNG">
+    <Key>
+      <PropertyRef Name="tendangnhap" />
+    </Key>
+    <Property Name="tendangnhap" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="matkhau" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="tennguoidung" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="loaitaikhoan" Type="Int32" Nullable="false" />
+  </EntityType>
+  <EntityType Name="sysdiagram">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="principal_id" Type="Int32" Nullable="false" />
+    <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="version" Type="Int32" />
+    <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="THISINH">
+    <Key>
+      <PropertyRef Name="sbd" />
+    </Key>
+    <Property Name="sbd" Type="String" MaxLength="5" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="hoten" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="ngaysinh" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="malop" Type="String" MaxLength="5" FixedLength="true" Unicode="false" Nullable="false" />
+    <NavigationProperty Name="BAITHIs" Relationship="Self.fk_baithithisinh" FromRole="THISINH" ToRole="BAITHI" />
+    <NavigationProperty Name="BIENBANTHIs" Relationship="Self.fk_bienbanthithisinh" FromRole="THISINH" ToRole="BIENBANTHI" />
+    <NavigationProperty Name="LOP" Relationship="Self.fk_thisinhlop" FromRole="THISINH" ToRole="LOP" />
+  </EntityType>
+  <Association Name="fk_baithimonhoc">
+    <End Role="MONTHI" Type="Self.MONTHI" Multiplicity="1" />
+    <End Role="BAITHI" Type="Self.BAITHI" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="MONTHI">
+        <PropertyRef Name="maMH" />
+      </Principal>
+      <Dependent Role="BAITHI">
+        <PropertyRef Name="maMH" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_baithithisinh">
+    <End Role="THISINH" Type="Self.THISINH" Multiplicity="1" />
+    <End Role="BAITHI" Type="Self.BAITHI" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="THISINH">
+        <PropertyRef Name="sbd" />
+      </Principal>
+      <Dependent Role="BAITHI">
+        <PropertyRef Name="sbd" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_bienbanthithisinh">
+    <End Role="THISINH" Type="Self.THISINH" Multiplicity="1" />
+    <End Role="BIENBANTHI" Type="Self.BIENBANTHI" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="THISINH">
+        <PropertyRef Name="sbd" />
+      </Principal>
+      <Dependent Role="BIENBANTHI">
+        <PropertyRef Name="sbd" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_lichthicanbocoithi">
+    <End Role="CANBOCOITHI" Type="Self.CANBOCOITHI" Multiplicity="1" />
+    <End Role="LICHTHI" Type="Self.LICHTHI" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CANBOCOITHI">
+        <PropertyRef Name="maCB" />
+      </Principal>
+      <Dependent Role="LICHTHI">
+        <PropertyRef Name="maCB" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_dethimonhoc">
+    <End Role="MONTHI" Type="Self.MONTHI" Multiplicity="1" />
+    <End Role="DETHIVADAPAN" Type="Self.DETHIVADAPAN" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="MONTHI">
+        <PropertyRef Name="maMH" />
+      </Principal>
+      <Dependent Role="DETHIVADAPAN">
+        <PropertyRef Name="maMH" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_gvchammonhoc">
+    <End Role="MONTHI" Type="Self.MONTHI" Multiplicity="1" />
+    <End Role="GIAOVIENCHAMTHI" Type="Self.GIAOVIENCHAMTHI" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="MONTHI">
+        <PropertyRef Name="maMH" />
+      </Principal>
+      <Dependent Role="GIAOVIENCHAMTHI">
+        <PropertyRef Name="maMH" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_lichthilop">
+    <End Role="LOP" Type="Self.LOP" Multiplicity="1" />
+    <End Role="LICHTHI" Type="Self.LICHTHI" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="LOP">
+        <PropertyRef Name="malop" />
+      </Principal>
+      <Dependent Role="LICHTHI">
+        <PropertyRef Name="malop" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_lichthimonhoc">
+    <End Role="MONTHI" Type="Self.MONTHI" Multiplicity="1" />
+    <End Role="LICHTHI" Type="Self.LICHTHI" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="MONTHI">
+        <PropertyRef Name="maMH" />
+      </Principal>
+      <Dependent Role="LICHTHI">
+        <PropertyRef Name="maMH" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_thisinhlop">
+    <End Role="LOP" Type="Self.LOP" Multiplicity="1" />
+    <End Role="THISINH" Type="Self.THISINH" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="LOP">
+        <PropertyRef Name="malop" />
+      </Principal>
+      <Dependent Role="THISINH">
+        <PropertyRef Name="malop" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="thivachamthiEntities5" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="BAITHIs" EntityType="Self.BAITHI" />
+    <EntitySet Name="BIENBANTHIs" EntityType="Self.BIENBANTHI" />
+    <EntitySet Name="CANBOCOITHIs" EntityType="Self.CANBOCOITHI" />
+    <EntitySet Name="DETHIVADAPANs" EntityType="Self.DETHIVADAPAN" />
+    <EntitySet Name="GIAOVIENCHAMTHIs" EntityType="Self.GIAOVIENCHAMTHI" />
+    <EntitySet Name="LICHTHIs" EntityType="Self.LICHTHI" />
+    <EntitySet Name="LOPs" EntityType="Self.LOP" />
+    <EntitySet Name="MONTHIs" EntityType="Self.MONTHI" />
+    <EntitySet Name="NGUOIDUNGs" EntityType="Self.NGUOIDUNG" />
+    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagram" />
+    <EntitySet Name="THISINHs" EntityType="Self.THISINH" />
+    <AssociationSet Name="fk_baithimonhoc" Association="Self.fk_baithimonhoc">
+      <End Role="MONTHI" EntitySet="MONTHIs" />
+      <End Role="BAITHI" EntitySet="BAITHIs" />
+    </AssociationSet>
+    <AssociationSet Name="fk_baithithisinh" Association="Self.fk_baithithisinh">
+      <End Role="THISINH" EntitySet="THISINHs" />
+      <End Role="BAITHI" EntitySet="BAITHIs" />
+    </AssociationSet>
+    <AssociationSet Name="fk_bienbanthithisinh" Association="Self.fk_bienbanthithisinh">
+      <End Role="THISINH" EntitySet="THISINHs" />
+      <End Role="BIENBANTHI" EntitySet="BIENBANTHIs" />
+    </AssociationSet>
+    <AssociationSet Name="fk_lichthicanbocoithi" Association="Self.fk_lichthicanbocoithi">
+      <End Role="CANBOCOITHI" EntitySet="CANBOCOITHIs" />
+      <End Role="LICHTHI" EntitySet="LICHTHIs" />
+    </AssociationSet>
+    <AssociationSet Name="fk_dethimonhoc" Association="Self.fk_dethimonhoc">
+      <End Role="MONTHI" EntitySet="MONTHIs" />
+      <End Role="DETHIVADAPAN" EntitySet="DETHIVADAPANs" />
+    </AssociationSet>
+    <AssociationSet Name="fk_gvchammonhoc" Association="Self.fk_gvchammonhoc">
+      <End Role="MONTHI" EntitySet="MONTHIs" />
+      <End Role="GIAOVIENCHAMTHI" EntitySet="GIAOVIENCHAMTHIs" />
+    </AssociationSet>
+    <AssociationSet Name="fk_lichthilop" Association="Self.fk_lichthilop">
+      <End Role="LOP" EntitySet="LOPs" />
+      <End Role="LICHTHI" EntitySet="LICHTHIs" />
+    </AssociationSet>
+    <AssociationSet Name="fk_lichthimonhoc" Association="Self.fk_lichthimonhoc">
+      <End Role="MONTHI" EntitySet="MONTHIs" />
+      <End Role="LICHTHI" EntitySet="LICHTHIs" />
+    </AssociationSet>
+    <AssociationSet Name="fk_thisinhlop" Association="Self.fk_thisinhlop">
+      <End Role="LOP" EntitySet="LOPs" />
+      <End Role="THISINH" EntitySet="THISINHs" />
+    </AssociationSet>
+    <FunctionImport Name="THONGKEBAITHI" IsComposable="true" ReturnType="Collection(thivachamthiModel.THONGKEBAITHI_Result)" />
+    <FunctionImport Name="THONGKEBIENBANVIPHAM" IsComposable="true" ReturnType="Collection(thivachamthiModel.THONGKEBIENBANVIPHAM_Result)" />
+    <FunctionImport Name="THONGKEDIEMTHITHEOLOP" IsComposable="true" ReturnType="Collection(thivachamthiModel.THONGKEDIEMTHITHEOLOP_Result)">
+      <Parameter Name="LOP" Mode="In" Type="String" />
+      <Parameter Name="MONTHI" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="THONGKELICHTHI" IsComposable="true" ReturnType="Collection(thivachamthiModel.THONGKELICHTHI_Result)" />
+    <FunctionImport Name="THONGKETHEOCANBO" IsComposable="true" ReturnType="Collection(thivachamthiModel.THONGKETHEOCANBO_Result)" />
+  </EntityContainer>
+</Schema>

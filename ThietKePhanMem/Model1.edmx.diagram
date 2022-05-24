@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="bc8a3318f28841e29d4e31aaa1a4c847" Name="Diagram1">
+        <EntityTypeShape EntityType="thivachamthiModel.BAITHI" Width="1.5" PointX="3" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="thivachamthiModel.BIENBANTHI" Width="1.5" PointX="3" PointY="15.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="thivachamthiModel.CANBOCOITHI" Width="1.5" PointX="3.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="thivachamthiModel.DETHIVADAPAN" Width="1.5" PointX="3" PointY="7.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="thivachamthiModel.GIAOVIENCHAMTHI" Width="1.5" PointX="3" PointY="9.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="thivachamthiModel.LICHTHI" Width="1.5" PointX="6" PointY="5.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="thivachamthiModel.LOP" Width="1.5" PointX="1.5" PointY="12.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="thivachamthiModel.MONTHI" Width="1.5" PointX="0.75" PointY="5.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="thivachamthiModel.NGUOIDUNG" Width="1.5" PointX="5.75" PointY="0.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="thivachamthiModel.sysdiagram" Width="1.5" PointX="7.75" PointY="0.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="thivachamthiModel.THISINH" Width="1.5" PointX="0.75" PointY="1.5" IsExpanded="true" />
+        <AssociationConnector Association="thivachamthiModel.fk_baithimonhoc" ManuallyRouted="false" />
+        <AssociationConnector Association="thivachamthiModel.fk_baithithisinh" ManuallyRouted="false" />
+        <AssociationConnector Association="thivachamthiModel.fk_bienbanthithisinh" ManuallyRouted="false" />
+        <AssociationConnector Association="thivachamthiModel.fk_lichthicanbocoithi" ManuallyRouted="false" />
+        <AssociationConnector Association="thivachamthiModel.fk_dethimonhoc" ManuallyRouted="false" />
+        <AssociationConnector Association="thivachamthiModel.fk_gvchammonhoc" ManuallyRouted="false" />
+        <AssociationConnector Association="thivachamthiModel.fk_lichthilop" ManuallyRouted="false" />
+        <AssociationConnector Association="thivachamthiModel.fk_lichthimonhoc" ManuallyRouted="false" />
+        <AssociationConnector Association="thivachamthiModel.fk_thisinhlop" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
