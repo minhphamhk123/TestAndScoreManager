@@ -61,41 +61,46 @@
             this.groupControl1.Controls.Add(this.dateTimePicker1);
             this.groupControl1.Controls.Add(this.label4);
             this.groupControl1.Controls.Add(this.label2);
-            this.groupControl1.Location = new System.Drawing.Point(2, 2);
+            this.groupControl1.Location = new System.Drawing.Point(3, 2);
+            this.groupControl1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.groupControl1.Name = "groupControl1";
-            this.groupControl1.Size = new System.Drawing.Size(714, 153);
+            this.groupControl1.Size = new System.Drawing.Size(952, 188);
             this.groupControl1.TabIndex = 3;
             this.groupControl1.Text = "TÙY CHỌN THỐNG KÊ";
             // 
             // btt_quaylai
             // 
-            this.btt_quaylai.Location = new System.Drawing.Point(368, 114);
+            this.btt_quaylai.Location = new System.Drawing.Point(491, 140);
+            this.btt_quaylai.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btt_quaylai.Name = "btt_quaylai";
-            this.btt_quaylai.Size = new System.Drawing.Size(86, 23);
+            this.btt_quaylai.Size = new System.Drawing.Size(115, 28);
             this.btt_quaylai.TabIndex = 11;
             this.btt_quaylai.Text = "QUAY LẠI";
             // 
             // comboBox2monhoc
             // 
             this.comboBox2monhoc.FormattingEnabled = true;
-            this.comboBox2monhoc.Location = new System.Drawing.Point(138, 58);
+            this.comboBox2monhoc.Location = new System.Drawing.Point(184, 71);
+            this.comboBox2monhoc.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.comboBox2monhoc.Name = "comboBox2monhoc";
-            this.comboBox2monhoc.Size = new System.Drawing.Size(121, 21);
+            this.comboBox2monhoc.Size = new System.Drawing.Size(160, 24);
             this.comboBox2monhoc.TabIndex = 10;
             // 
             // comboBox1lop
             // 
             this.comboBox1lop.FormattingEnabled = true;
-            this.comboBox1lop.Location = new System.Drawing.Point(0, 58);
+            this.comboBox1lop.Location = new System.Drawing.Point(0, 71);
+            this.comboBox1lop.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.comboBox1lop.Name = "comboBox1lop";
-            this.comboBox1lop.Size = new System.Drawing.Size(121, 21);
+            this.comboBox1lop.Size = new System.Drawing.Size(160, 24);
             this.comboBox1lop.TabIndex = 9;
             // 
             // btt_tktong
             // 
-            this.btt_tktong.Location = new System.Drawing.Point(253, 114);
+            this.btt_tktong.Location = new System.Drawing.Point(337, 140);
+            this.btt_tktong.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btt_tktong.Name = "btt_tktong";
-            this.btt_tktong.Size = new System.Drawing.Size(86, 23);
+            this.btt_tktong.Size = new System.Drawing.Size(115, 28);
             this.btt_tktong.TabIndex = 7;
             this.btt_tktong.Text = "THỐNG KÊ TỔNG";
             this.btt_tktong.Click += new System.EventHandler(this.btt_tktong_Click);
@@ -103,9 +108,10 @@
             // radioButtonmonhoc
             // 
             this.radioButtonmonhoc.AutoSize = true;
-            this.radioButtonmonhoc.Location = new System.Drawing.Point(138, 26);
+            this.radioButtonmonhoc.Location = new System.Drawing.Point(184, 32);
+            this.radioButtonmonhoc.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.radioButtonmonhoc.Name = "radioButtonmonhoc";
-            this.radioButtonmonhoc.Size = new System.Drawing.Size(73, 17);
+            this.radioButtonmonhoc.Size = new System.Drawing.Size(90, 21);
             this.radioButtonmonhoc.TabIndex = 8;
             this.radioButtonmonhoc.TabStop = true;
             this.radioButtonmonhoc.Text = "MÔN HỌC";
@@ -114,9 +120,10 @@
             // radioButtonlop
             // 
             this.radioButtonlop.AutoSize = true;
-            this.radioButtonlop.Location = new System.Drawing.Point(10, 25);
+            this.radioButtonlop.Location = new System.Drawing.Point(13, 31);
+            this.radioButtonlop.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.radioButtonlop.Name = "radioButtonlop";
-            this.radioButtonlop.Size = new System.Drawing.Size(71, 17);
+            this.radioButtonlop.Size = new System.Drawing.Size(90, 21);
             this.radioButtonlop.TabIndex = 7;
             this.radioButtonlop.TabStop = true;
             this.radioButtonlop.Text = "LỚP         ";
@@ -124,69 +131,78 @@
             // 
             // btt_xembaocao
             // 
-            this.btt_xembaocao.Location = new System.Drawing.Point(138, 114);
+            this.btt_xembaocao.Location = new System.Drawing.Point(184, 140);
+            this.btt_xembaocao.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btt_xembaocao.Name = "btt_xembaocao";
-            this.btt_xembaocao.Size = new System.Drawing.Size(86, 23);
+            this.btt_xembaocao.Size = new System.Drawing.Size(115, 28);
             this.btt_xembaocao.TabIndex = 6;
             this.btt_xembaocao.Text = "XEM BÁO CÁO";
             this.btt_xembaocao.Click += new System.EventHandler(this.btt_xembaocao_Click);
             // 
             // btt_thongke
             // 
-            this.btt_thongke.Location = new System.Drawing.Point(19, 114);
+            this.btt_thongke.Location = new System.Drawing.Point(25, 140);
+            this.btt_thongke.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btt_thongke.Name = "btt_thongke";
-            this.btt_thongke.Size = new System.Drawing.Size(86, 23);
+            this.btt_thongke.Size = new System.Drawing.Size(115, 28);
             this.btt_thongke.TabIndex = 5;
             this.btt_thongke.Text = "THỐNG KÊ";
             this.btt_thongke.Click += new System.EventHandler(this.btt_thongke_Click);
             // 
             // dateTimePicker2
             // 
-            this.dateTimePicker2.Location = new System.Drawing.Point(356, 66);
+            this.dateTimePicker2.Location = new System.Drawing.Point(475, 81);
+            this.dateTimePicker2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.dateTimePicker2.Name = "dateTimePicker2";
-            this.dateTimePicker2.Size = new System.Drawing.Size(200, 21);
+            this.dateTimePicker2.Size = new System.Drawing.Size(265, 23);
             this.dateTimePicker2.TabIndex = 4;
             // 
             // dateTimePicker1
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(356, 30);
+            this.dateTimePicker1.Location = new System.Drawing.Point(475, 37);
+            this.dateTimePicker1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(200, 21);
+            this.dateTimePicker1.Size = new System.Drawing.Size(265, 23);
             this.dateTimePicker1.TabIndex = 3;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(276, 30);
+            this.label4.Location = new System.Drawing.Point(368, 37);
+            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(51, 13);
+            this.label4.Size = new System.Drawing.Size(64, 17);
             this.label4.TabIndex = 0;
             this.label4.Text = "TỪ NGÀY";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(269, 66);
+            this.label2.Location = new System.Drawing.Point(359, 81);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(58, 13);
+            this.label2.Size = new System.Drawing.Size(73, 17);
             this.label2.TabIndex = 0;
             this.label2.Text = "ĐẾN NGÀY";
             // 
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(12, 187);
+            this.dataGridView1.Location = new System.Drawing.Point(16, 230);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(681, 150);
+            this.dataGridView1.RowHeadersWidth = 51;
+            this.dataGridView1.Size = new System.Drawing.Size(908, 185);
             this.dataGridView1.TabIndex = 4;
             // 
             // ThongKeLichThi
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(792, 361);
+            this.ClientSize = new System.Drawing.Size(960, 444);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.groupControl1);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "ThongKeLichThi";
             this.Text = "ThongKeLichThi";
             this.Load += new System.EventHandler(this.ThongKeLichThi_Load);

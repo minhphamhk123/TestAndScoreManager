@@ -31,7 +31,7 @@ namespace ThietKePhanMem
             {
                 if (tk.timkiem(txt_tk.Text, txt_mk.Text) == 1 )
                 {
-                    MessageBox.Show("Chào Mừng  " + txt_tk.Text + " Đã Đến Với\nPhần Mềm Quản Lý Thi Và Chấm Thi                                            Trường T36");
+                    MessageBox.Show("Chào Mừng  " + txt_tk.Text + " Đã Đến Với\nPhần Mềm Quản Lý Thi Và Chấm Thi                                            UIT");
                     Form_Main f = new Form_Main();
                     f.Show();
                     Hide();
@@ -40,7 +40,7 @@ namespace ThietKePhanMem
 
                 else if (tk.timkiem(txt_tk.Text, txt_mk.Text) == 2)
                 {
-                    MessageBox.Show("Chào Mừng == " + txt_tk.Text + "==Đã Đến Với Phần Mềm Quản Lý Thi Và Chấm Thi                                            Trường T36");
+                    MessageBox.Show("Chào Mừng == " + txt_tk.Text + "==Đã Đến Với Phần Mềm Quản Lý Thi Và Chấm Thi                                            UIT");
                     Form_Main f = new Form_Main();
                     f.Show();
                     Hide();
@@ -49,7 +49,7 @@ namespace ThietKePhanMem
 
                 else
                 {
-                    if (MessageBox.Show("Tên tài khoản hoặc mật khẩu không chính xác!\nVui lòng nhập lại thông tin?", "Thông báo", MessageBoxButtons.YesNo) == DialogResult.Yes)
+                    if (MessageBox.Show("Tên tài khoản hoặc mật khẩu không chính xác!\nVui lòng nhập lại thông tin?", "Thông báo", MessageBoxButtons.OK) == DialogResult.Yes)
                         txt_tk.Focus();
                     else
                     {

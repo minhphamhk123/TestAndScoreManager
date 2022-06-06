@@ -142,7 +142,7 @@ namespace ThietKePhanMem
         private void barButtonItem5_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             ThongKeBaiThi a = new ThongKeBaiThi();
-            a.Show();
+            a.ShowDialog();
             Hide();
         }
 
@@ -680,6 +680,9 @@ namespace ThietKePhanMem
             txt_lichthi_timkiem.Focus();
         }
 
+        private void ribbonControl1_Click(object sender, EventArgs e)
+        {
 
+        }
     }
 }
