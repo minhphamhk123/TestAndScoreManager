@@ -12,7 +12,7 @@ namespace ThietKePhanMem.DataAcess
     {
         public SqlConnection connect()
         {
-            return new SqlConnection(@"Data Source=NGUYEN_VAN_HANH\SQLEXPRESS;Initial Catalog=thivachamthi;Integrated Security=True");
+            return new SqlConnection(@"Data Source=DESKTOP-PUO8CB7\MINHPHAM;Initial Catalog=T1;Integrated Security=True");
         }
         public DataTable GET(string sql)
         {

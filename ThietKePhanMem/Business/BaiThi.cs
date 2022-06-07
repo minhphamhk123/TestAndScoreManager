@@ -21,5 +21,11 @@ namespace ThietKePhanMem.Business
             string sql = "select * from BAITHI where sbd like '%" + dk + "%' or maMH like '%" + dk + "%'";
             return da.GET(sql);
         }
+
+        public void them(string sbd, string maMH, string diemthi)
+        {
+            string sql = "insert into BAITHI values(N'" + sbd + "',N'" + maMH + "',N'" + diemthi + "') ";
+            da.AC(sql);
+        }
     }
 }

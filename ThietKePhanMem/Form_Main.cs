@@ -66,7 +66,7 @@ namespace ThietKePhanMem
         private void dg_lop_RowEnter(object sender, DataGridViewCellEventArgs e)
         {
             int dong = e.RowIndex;
-            txt_lop_malop.Text=dg_lop.Rows[dong].Cells[0].Value.ToString();
+            txt_lop_malop.Text = dg_lop.Rows[dong].Cells[0].Value.ToString();
             txt_lop_tenlop.Text = dg_lop.Rows[dong].Cells[1].Value.ToString();
             txt_lop_siso.Text = dg_lop.Rows[dong].Cells[2].Value.ToString();
         }
@@ -381,7 +381,9 @@ namespace ThietKePhanMem
 
         private void them_thisinh_Click(object sender, EventArgs e)
         {
-
+            hv.them(txt_thisinh_sbd.Text, txt_thisinh_malop.Text, dtp_thisinh_ngaysinh.Value, txt_thisinh_gioinam.Text);
+            MessageBox.Show("Thêm lớp mới thành công");
+            Form_Main_Load(sender, e);
         }
 
         private void sua_thisinh_Click(object sender, EventArgs e)
@@ -520,17 +522,46 @@ namespace ThietKePhanMem
 
         private void them_canbo_Click(object sender, EventArgs e)
         {
-
+            try
+            {
+                cbct.them(txt_canbo_ma.Text, txt_canbo_ten.Text, txt_canbo_donvi.Text, txt_canbo_chucvu.Text);
+                MessageBox.Show("Thêm lớp mới thành công");
+                Form_Main_Load(sender, e);
+            }
+            catch
+            {
+                MessageBox.Show("Thêm lớp mới thất bại");
+            }
+            
         }
 
         private void sua_canbo_Click(object sender, EventArgs e)
         {
-
+            try
+            {
+                cbct.sua(txt_canbo_ma.Text, txt_canbo_ten.Text, txt_canbo_donvi.Text, txt_canbo_chucvu.Text);
+                MessageBox.Show("Sửa lớp  thành công");
+                Form_Main_Load(sender, e);
+            }
+            catch
+            {
+                MessageBox.Show("Sửa lớp không thanh công thành công");
+            }
         }
 
         private void xoa_canbo_Click(object sender, EventArgs e)
         {
-
+            if (txt_canbo_ma.TextLength == 0)
+                MessageBox.Show("Bạn cần chọn Tài Khoản để xóa");
+            else
+            {
+                if (DialogResult.Yes == MessageBox.Show("Bạn có chắc chắn xóa không", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question))
+                {
+                    cbct.xoa(txt_canbo_ma.Text);
+                    MessageBox.Show("Đã xóa thành công");
+                    Form_Main_Load(sender, e);
+                }
+            }
         }
 
         private void reset_canbo_Click(object sender, EventArgs e)
@@ -566,7 +597,9 @@ namespace ThietKePhanMem
 
         private void them_baithi_Click(object sender, EventArgs e)
         {
-
+            bt.them(txt_baithi_sbd.Text, txt_baithi_mamon.Text, txt_baithi_diem.Text);
+            MessageBox.Show("Thêm lớp mới thành công");
+            Form_Main_Load(sender, e);
         }
 
         private void sua_baithi_Click(object sender, EventArgs e)

@@ -21,5 +21,10 @@ namespace ThietKePhanMem.Business
             string sql = "select * from THISINH where sbd like '%" + dk + "%'";
             return da.GET(sql);
         }
+        public void them(string sbd, string HT, DateTime ns, string malop)
+        {
+            string sql = "insert into THISINH values(N'" + sbd + "','" + HT + "',N'" + ns + "',N'" + malop + "') ";
+            da.AC(sql);
+        }
     }
 }
