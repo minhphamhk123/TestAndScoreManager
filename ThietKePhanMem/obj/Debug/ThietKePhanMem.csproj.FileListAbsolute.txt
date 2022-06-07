@@ -576,7 +576,6 @@ D:\HK4\SE104.M21 - Nhập môn Công Nghệ Phần Mềm\Báo cáo\BaiTapNhom\Te
 D:\HK4\SE104.M21 - Nhập môn Công Nghệ Phần Mềm\Báo cáo\BaiTapNhom\TestAndScoreManager\ThietKePhanMem\bin\Debug\es\DevExpress.Diagram.v21.2.Core.resources.dll
 D:\HK4\SE104.M21 - Nhập môn Công Nghệ Phần Mềm\Báo cáo\BaiTapNhom\TestAndScoreManager\ThietKePhanMem\bin\Debug\ja\DevExpress.Diagram.v21.2.Core.resources.dll
 D:\HK4\SE104.M21 - Nhập môn Công Nghệ Phần Mềm\Báo cáo\BaiTapNhom\TestAndScoreManager\ThietKePhanMem\bin\Debug\ru\DevExpress.Diagram.v21.2.Core.resources.dll
-D:\HK4\SE104.M21 - Nhập môn Công Nghệ Phần Mềm\Báo cáo\BaiTapNhom\TestAndScoreManager\ThietKePhanMem\obj\Debug\ThietKePhanMem.csproj.AssemblyReference.cache
 D:\HK4\SE104.M21 - Nhập môn Công Nghệ Phần Mềm\Báo cáo\BaiTapNhom\TestAndScoreManager\ThietKePhanMem\obj\Debug\ThietKePhanMem.Dangnhap.resources
 D:\HK4\SE104.M21 - Nhập môn Công Nghệ Phần Mềm\Báo cáo\BaiTapNhom\TestAndScoreManager\ThietKePhanMem\obj\Debug\ThietKePhanMem.Form_Main.resources
 D:\HK4\SE104.M21 - Nhập môn Công Nghệ Phần Mềm\Báo cáo\BaiTapNhom\TestAndScoreManager\ThietKePhanMem\obj\Debug\ThietKePhanMem.GioiThieu.resources
@@ -592,3 +591,4 @@ D:\HK4\SE104.M21 - Nhập môn Công Nghệ Phần Mềm\Báo cáo\BaiTapNhom\Te
 D:\HK4\SE104.M21 - Nhập môn Công Nghệ Phần Mềm\Báo cáo\BaiTapNhom\TestAndScoreManager\ThietKePhanMem\obj\Debug\ThietKePhanMem.csproj.CoreCompileInputs.cache
 D:\HK4\SE104.M21 - Nhập môn Công Nghệ Phần Mềm\Báo cáo\BaiTapNhom\TestAndScoreManager\ThietKePhanMem\obj\Debug\ThietKePhanMem.exe
 D:\HK4\SE104.M21 - Nhập môn Công Nghệ Phần Mềm\Báo cáo\BaiTapNhom\TestAndScoreManager\ThietKePhanMem\obj\Debug\ThietKePhanMem.pdb
+D:\HK4\SE104.M21 - Nhập môn Công Nghệ Phần Mềm\Báo cáo\BaiTapNhom\TestAndScoreManager\ThietKePhanMem\obj\Debug\ThietKePhanMem.csproj.AssemblyReference.cache

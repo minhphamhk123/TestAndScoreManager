@@ -59,7 +59,7 @@ namespace ThietKePhanMem
 
         private void btt_xembaocao_Click(object sender, EventArgs e)
         {
-            SqlConnection con = new SqlConnection(@"Data Source=NGUYEN_VAN_HANH\SQLEXPRESS;Initial Catalog=thivachamthi;Integrated Security=True");
+            SqlConnection con = new SqlConnection(@"Data Source=THAO-HUYNH;Initial Catalog=RADEVACHAMTHI;Integrated Security=True");
             con.Open();
             DateTime dt1 = Convert.ToDateTime(dateTimePicker1.Value.ToString());
             DateTime dt2 = Convert.ToDateTime(dateTimePicker2.Value.ToString());
@@ -71,6 +71,11 @@ namespace ThietKePhanMem
             XtraReport1_thongkelichthi x = new XtraReport1_thongkelichthi();
             x.DataSource = bang;
             x.ShowPreviewDialog();
+        }
+
+        private void btt_quaylai_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

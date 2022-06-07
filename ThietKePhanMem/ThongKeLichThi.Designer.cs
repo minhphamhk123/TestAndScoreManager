@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ThongKeLichThi));
             this.groupControl1 = new DevExpress.XtraEditors.GroupControl();
             this.btt_quaylai = new DevExpress.XtraEditors.SimpleButton();
             this.comboBox2monhoc = new System.Windows.Forms.ComboBox();
@@ -61,46 +62,63 @@
             this.groupControl1.Controls.Add(this.dateTimePicker1);
             this.groupControl1.Controls.Add(this.label4);
             this.groupControl1.Controls.Add(this.label2);
-            this.groupControl1.Location = new System.Drawing.Point(3, 2);
-            this.groupControl1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupControl1.Location = new System.Drawing.Point(8, 6);
+            this.groupControl1.Margin = new System.Windows.Forms.Padding(5);
             this.groupControl1.Name = "groupControl1";
-            this.groupControl1.Size = new System.Drawing.Size(952, 188);
+            this.groupControl1.Size = new System.Drawing.Size(1186, 223);
             this.groupControl1.TabIndex = 3;
             this.groupControl1.Text = "TÙY CHỌN THỐNG KÊ";
             // 
             // btt_quaylai
             // 
-            this.btt_quaylai.Location = new System.Drawing.Point(491, 140);
-            this.btt_quaylai.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btt_quaylai.Appearance.Font = new System.Drawing.Font("Arial", 7.8F);
+            this.btt_quaylai.Appearance.Options.UseFont = true;
+            this.btt_quaylai.AppearanceHovered.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.btt_quaylai.AppearanceHovered.BorderColor = System.Drawing.Color.Blue;
+            this.btt_quaylai.AppearanceHovered.Font = new System.Drawing.Font("Arial", 7.8F, System.Drawing.FontStyle.Bold);
+            this.btt_quaylai.AppearanceHovered.Options.UseBackColor = true;
+            this.btt_quaylai.AppearanceHovered.Options.UseBorderColor = true;
+            this.btt_quaylai.AppearanceHovered.Options.UseFont = true;
+            this.btt_quaylai.Location = new System.Drawing.Point(614, 166);
+            this.btt_quaylai.Margin = new System.Windows.Forms.Padding(5);
             this.btt_quaylai.Name = "btt_quaylai";
-            this.btt_quaylai.Size = new System.Drawing.Size(115, 28);
+            this.btt_quaylai.Size = new System.Drawing.Size(144, 33);
             this.btt_quaylai.TabIndex = 11;
             this.btt_quaylai.Text = "QUAY LẠI";
+            this.btt_quaylai.Click += new System.EventHandler(this.btt_quaylai_Click);
             // 
             // comboBox2monhoc
             // 
             this.comboBox2monhoc.FormattingEnabled = true;
-            this.comboBox2monhoc.Location = new System.Drawing.Point(184, 71);
-            this.comboBox2monhoc.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.comboBox2monhoc.Location = new System.Drawing.Point(230, 84);
+            this.comboBox2monhoc.Margin = new System.Windows.Forms.Padding(5);
             this.comboBox2monhoc.Name = "comboBox2monhoc";
-            this.comboBox2monhoc.Size = new System.Drawing.Size(160, 24);
+            this.comboBox2monhoc.Size = new System.Drawing.Size(199, 24);
             this.comboBox2monhoc.TabIndex = 10;
             // 
             // comboBox1lop
             // 
             this.comboBox1lop.FormattingEnabled = true;
-            this.comboBox1lop.Location = new System.Drawing.Point(0, 71);
-            this.comboBox1lop.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.comboBox1lop.Location = new System.Drawing.Point(0, 84);
+            this.comboBox1lop.Margin = new System.Windows.Forms.Padding(5);
             this.comboBox1lop.Name = "comboBox1lop";
-            this.comboBox1lop.Size = new System.Drawing.Size(160, 24);
+            this.comboBox1lop.Size = new System.Drawing.Size(219, 24);
             this.comboBox1lop.TabIndex = 9;
             // 
             // btt_tktong
             // 
-            this.btt_tktong.Location = new System.Drawing.Point(337, 140);
-            this.btt_tktong.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btt_tktong.Appearance.Font = new System.Drawing.Font("Arial", 7.8F);
+            this.btt_tktong.Appearance.Options.UseFont = true;
+            this.btt_tktong.AppearanceHovered.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.btt_tktong.AppearanceHovered.BorderColor = System.Drawing.Color.Blue;
+            this.btt_tktong.AppearanceHovered.Font = new System.Drawing.Font("Arial", 7.8F, System.Drawing.FontStyle.Bold);
+            this.btt_tktong.AppearanceHovered.Options.UseBackColor = true;
+            this.btt_tktong.AppearanceHovered.Options.UseBorderColor = true;
+            this.btt_tktong.AppearanceHovered.Options.UseFont = true;
+            this.btt_tktong.Location = new System.Drawing.Point(421, 166);
+            this.btt_tktong.Margin = new System.Windows.Forms.Padding(5);
             this.btt_tktong.Name = "btt_tktong";
-            this.btt_tktong.Size = new System.Drawing.Size(115, 28);
+            this.btt_tktong.Size = new System.Drawing.Size(144, 33);
             this.btt_tktong.TabIndex = 7;
             this.btt_tktong.Text = "THỐNG KÊ TỔNG";
             this.btt_tktong.Click += new System.EventHandler(this.btt_tktong_Click);
@@ -108,8 +126,8 @@
             // radioButtonmonhoc
             // 
             this.radioButtonmonhoc.AutoSize = true;
-            this.radioButtonmonhoc.Location = new System.Drawing.Point(184, 32);
-            this.radioButtonmonhoc.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.radioButtonmonhoc.Location = new System.Drawing.Point(230, 38);
+            this.radioButtonmonhoc.Margin = new System.Windows.Forms.Padding(5);
             this.radioButtonmonhoc.Name = "radioButtonmonhoc";
             this.radioButtonmonhoc.Size = new System.Drawing.Size(90, 21);
             this.radioButtonmonhoc.TabIndex = 8;
@@ -120,8 +138,8 @@
             // radioButtonlop
             // 
             this.radioButtonlop.AutoSize = true;
-            this.radioButtonlop.Location = new System.Drawing.Point(13, 31);
-            this.radioButtonlop.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.radioButtonlop.Location = new System.Drawing.Point(16, 37);
+            this.radioButtonlop.Margin = new System.Windows.Forms.Padding(5);
             this.radioButtonlop.Name = "radioButtonlop";
             this.radioButtonlop.Size = new System.Drawing.Size(90, 21);
             this.radioButtonlop.TabIndex = 7;
@@ -131,45 +149,61 @@
             // 
             // btt_xembaocao
             // 
-            this.btt_xembaocao.Location = new System.Drawing.Point(184, 140);
-            this.btt_xembaocao.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btt_xembaocao.Appearance.Font = new System.Drawing.Font("Arial", 7.8F);
+            this.btt_xembaocao.Appearance.Options.UseFont = true;
+            this.btt_xembaocao.AppearanceHovered.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.btt_xembaocao.AppearanceHovered.BorderColor = System.Drawing.Color.Blue;
+            this.btt_xembaocao.AppearanceHovered.Font = new System.Drawing.Font("Arial", 7.8F, System.Drawing.FontStyle.Bold);
+            this.btt_xembaocao.AppearanceHovered.Options.UseBackColor = true;
+            this.btt_xembaocao.AppearanceHovered.Options.UseBorderColor = true;
+            this.btt_xembaocao.AppearanceHovered.Options.UseFont = true;
+            this.btt_xembaocao.Location = new System.Drawing.Point(230, 166);
+            this.btt_xembaocao.Margin = new System.Windows.Forms.Padding(5);
             this.btt_xembaocao.Name = "btt_xembaocao";
-            this.btt_xembaocao.Size = new System.Drawing.Size(115, 28);
+            this.btt_xembaocao.Size = new System.Drawing.Size(144, 33);
             this.btt_xembaocao.TabIndex = 6;
             this.btt_xembaocao.Text = "XEM BÁO CÁO";
             this.btt_xembaocao.Click += new System.EventHandler(this.btt_xembaocao_Click);
             // 
             // btt_thongke
             // 
-            this.btt_thongke.Location = new System.Drawing.Point(25, 140);
-            this.btt_thongke.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btt_thongke.Appearance.Font = new System.Drawing.Font("Arial", 7.8F);
+            this.btt_thongke.Appearance.Options.UseFont = true;
+            this.btt_thongke.AppearanceHovered.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.btt_thongke.AppearanceHovered.BorderColor = System.Drawing.Color.Blue;
+            this.btt_thongke.AppearanceHovered.Font = new System.Drawing.Font("Arial", 7.8F, System.Drawing.FontStyle.Bold);
+            this.btt_thongke.AppearanceHovered.Options.UseBackColor = true;
+            this.btt_thongke.AppearanceHovered.Options.UseBorderColor = true;
+            this.btt_thongke.AppearanceHovered.Options.UseFont = true;
+            this.btt_thongke.Location = new System.Drawing.Point(31, 166);
+            this.btt_thongke.Margin = new System.Windows.Forms.Padding(5);
             this.btt_thongke.Name = "btt_thongke";
-            this.btt_thongke.Size = new System.Drawing.Size(115, 28);
+            this.btt_thongke.Size = new System.Drawing.Size(144, 33);
             this.btt_thongke.TabIndex = 5;
             this.btt_thongke.Text = "THỐNG KÊ";
             this.btt_thongke.Click += new System.EventHandler(this.btt_thongke_Click);
             // 
             // dateTimePicker2
             // 
-            this.dateTimePicker2.Location = new System.Drawing.Point(475, 81);
-            this.dateTimePicker2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dateTimePicker2.Location = new System.Drawing.Point(546, 96);
+            this.dateTimePicker2.Margin = new System.Windows.Forms.Padding(5);
             this.dateTimePicker2.Name = "dateTimePicker2";
-            this.dateTimePicker2.Size = new System.Drawing.Size(265, 23);
+            this.dateTimePicker2.Size = new System.Drawing.Size(241, 23);
             this.dateTimePicker2.TabIndex = 4;
             // 
             // dateTimePicker1
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(475, 37);
-            this.dateTimePicker1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dateTimePicker1.Location = new System.Drawing.Point(546, 44);
+            this.dateTimePicker1.Margin = new System.Windows.Forms.Padding(5);
             this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(265, 23);
+            this.dateTimePicker1.Size = new System.Drawing.Size(241, 23);
             this.dateTimePicker1.TabIndex = 3;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(368, 37);
-            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label4.Location = new System.Drawing.Point(474, 49);
+            this.label4.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(64, 17);
             this.label4.TabIndex = 0;
@@ -178,8 +212,8 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(359, 81);
-            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label2.Location = new System.Drawing.Point(465, 101);
+            this.label2.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(73, 17);
             this.label2.TabIndex = 0;
@@ -187,24 +221,29 @@
             // 
             // dataGridView1
             // 
+            this.dataGridView1.BackgroundColor = System.Drawing.Color.White;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(16, 230);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dataGridView1.Location = new System.Drawing.Point(16, 253);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(5);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.Size = new System.Drawing.Size(908, 185);
+            this.dataGridView1.Size = new System.Drawing.Size(1169, 259);
             this.dataGridView1.TabIndex = 4;
             // 
             // ThongKeLichThi
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(960, 444);
+            this.BackColor = System.Drawing.Color.Azure;
+            this.ClientSize = new System.Drawing.Size(1201, 525);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.groupControl1);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(5);
             this.Name = "ThongKeLichThi";
-            this.Text = "ThongKeLichThi";
+            this.Text = "THỐNG KÊ LỊCH THI";
             this.Load += new System.EventHandler(this.ThongKeLichThi_Load);
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).EndInit();
             this.groupControl1.ResumeLayout(false);

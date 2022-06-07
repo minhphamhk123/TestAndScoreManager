@@ -72,8 +72,5 @@ namespace ThietKePhanMem
             x.DataSource = bang;
             x.ShowPreviewDialog();
         }
-
-
-
     }
 }
